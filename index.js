@@ -7,6 +7,10 @@ const r = readline.createInterface({
 });
 
 r.question("Enter the number of hats: ", (n) => {
-  console.log(`The result is ${checkHats(n)}`);
+  if (n % 1 !== 0) {
+    console.log("Input must be an integer.");
+  } else {
+    console.log(`The result is ${checkHats(n)}`);
+  }
   process.exit(0);
 });
